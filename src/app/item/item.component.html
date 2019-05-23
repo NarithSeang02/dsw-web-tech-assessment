@@ -1,0 +1,10 @@
+<mat-grid-list  cols="6" rowHeight="300px">
+<mat-grid-tile [colspan]="2" [rowspan]="1" *ngFor="let item of items[0];">
+  <img src="../../assets/images/products/{{item.id}}.jpg" mat-card-image>
+  <p>{{item.brand}}</p>
+  <p>{{item.name}}</p>
+  <p>{{item.price | currency:USD}}</p>
+  <p *ngIf="item.compValue">Comp. Value {{item.compValue | currency:USD}}</p>
+  <p>{{item.rating}}</p>
+</mat-grid-tile>
+</mat-grid-list>
